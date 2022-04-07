@@ -1,0 +1,20 @@
+package com.schoolofnet.mvc;
+
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+
+public class CalcView {
+	private JFrame frame;
+	private JButton btnCalc;
+	private JTextField txtNum1;
+	private JTextField txtNum2;
+	private JComboBox cmbOperation;
+	
+	public CalcView() {
+		prepareGUI();
+	}
+	
+	private void prepareGUI() {
+		
+	}
+}

@@ -1,0 +1,17 @@
+package com.schoolofnet.mvc;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class CalcController implements ActionListener {
+	
+	public CalcController() {
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+	}
+
+}

@@ -1,0 +1,72 @@
+package com.schoolofnet;
+
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Calc {
+	private static JFrame mainFrame;
+	private static JPanel mainPanel;
+	private static JButton btnCalc;
+	private static JTextField txtNum1;
+	private static JTextField txtNum2;
+	private static JComboBox op;
+
+	public Calc() {
+		prepareGUI();
+	}
+
+	public static void main(String[] args) {
+		Calc main = new Calc();
+	}
+
+	private void prepareGUI() {
+		mainFrame = new JFrame();
+		mainFrame.setBounds(100, 100, 400, 200);
+		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		mainFrame.setTitle("Second Frame");
+		mainFrame.setLayout(new GridLayout(4, 0));
+		
+		btnCalc = new JButton("Click here.");
+		btnCalc.setActionCommand("Action");
+		btnCalc.addActionListener(new BtnHandler());
+
+		txtNum1 = new JTextField(30);
+
+		mainPanel = new JPanel();
+		mainPanel.setLayout(new FlowLayout());
+		mainPanel.add(txtNum1);
+		mainPanel.add(btnCalc);
+
+		mainFrame.add(mainPanel);
+		mainFrame.setVisible(true);
+	}
+
+	private class BtnHandler implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			String command = e.getActionCommand();
+
+			switch (command) {
+			case "Action":
+				System.out.println("My first event");
+				JOptionPane.showMessageDialog(null, txtNum1.getText());
+				break;
+			default:
+				System.out.println("Invalid action.");
+				break;
+			}
+		}
+
+	}
+
+}

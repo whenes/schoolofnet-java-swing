@@ -1,0 +1,16 @@
+package com.schoolofnet;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+
+public class EventsSwing {
+	private static JFrame frame;
+	public static void main(String[] args) {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 250, 200);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setTitle("First Frame");
+		frame.setVisible(true);
+	}
+}

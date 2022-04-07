@@ -1,0 +1,26 @@
+package com.schoolofnet.mvc;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+
+public class CalcController implements ActionListener {
+	
+	private JTextField txtNum1;
+	private JTextField txtNum2;
+	private JComboBox cmbOperation;
+	
+	public CalcController(JTextField txtNum1, JTextField txtNum2, JComboBox cmbOperation) {
+		this.txtNum1 = txtNum1;
+		this.txtNum2 = txtNum2;
+		this.cmbOperation = cmbOperation;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.schoolofnet;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class HelloWorld {
+	private static JFrame frame;
+	private static JLabel lblHello;
+	public static void main(String[] args) {
+		frame = new JFrame();
+		lblHello = new JLable("");
+		frame.setBounds(100, 100, 250, 200);
+	}
+}

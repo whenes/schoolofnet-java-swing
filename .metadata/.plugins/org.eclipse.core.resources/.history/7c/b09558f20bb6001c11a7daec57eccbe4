@@ -1,0 +1,11 @@
+package com.schoolofnet.mvc;
+
+public class CalcView {
+	public CalcView() {
+		prepareGUI();
+	}
+	
+	private void prepareGUI() {
+		
+	}
+}
